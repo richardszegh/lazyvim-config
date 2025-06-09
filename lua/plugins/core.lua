@@ -14,7 +14,7 @@ return {
           explorer = {
             hidden = true,
             ignored = true,
-            exclude = { "node_modules", ".git" },
+            exclude = { "node_modules", ".git", ".DS_Store" },
           },
         },
       },
@@ -62,6 +62,26 @@ return {
     },
     opts = {
       -- Your settings go here
+    },
+  },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "typescript-language-server",
+        "astro-language-server",
+        "tailwindcss-language-server",
+        "yaml-language-server",
+        "ruby-lsp",
+        "python-lsp-server",
+        "dockerfile-language-server",
+        "prettier",
+        "black",
+        "lua-language-server",
+        "shfmt",
+        "stylua",
+      },
     },
   },
 }
